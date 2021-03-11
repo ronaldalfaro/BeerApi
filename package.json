@@ -1,0 +1,27 @@
+{
+  "name": "beerapi",
+  "version": "1.0.0",
+  "description": "BeerApi is used to register the consumption of different beers by users.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "beer",
+    "api"
+  ],
+  "author": "Ronald Alfaro B.",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.18",
+    "nodemon": "^2.0.7",
+    "validator": "^13.5.2"
+  }
+}
