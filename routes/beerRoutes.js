@@ -94,7 +94,10 @@ router.patch('/:id', verify,async (req, res) =>{
                     type:req.body.type
                 }
             });
-        res.json(updatedBeer);
+
+        const beer = await Beer.findOne({_id: req.params.id});
+
+        res.json(beer);
     } catch (error) {
         res.json({
             message:error
