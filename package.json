@@ -2,8 +2,12 @@
   "name": "beerapi",
   "version": "1.0.0",
   "description": "BeerApi is used to register the consumption of different beers by users.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "format": "prettier --config .prettierrc '**/*.js' --write",
+    "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
+    "lint": "eslint . --ext .js",
+    "lint-and-fix": "eslint . --ext .js --fix",
     "start": "nodemon app.js"
   },
   "keywords": [
@@ -11,17 +15,27 @@
     "api"
   ],
   "author": "Ronald Alfaro B.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronaldalfaro/BeerApi.git"
+  },
   "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "joi": "^17.4.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.18",
-    "nodemon": "^2.0.7",
-    "validator": "^13.5.2"
+    "bcryptjs": "~2.4.3",
+    "body-parser": "^1.19.2",
+    "dotenv": "~8.2.0",
+    "express": "^4.17.3",
+    "joi": "^17.4.3",
+    "jsonwebtoken": "~8.5.1",
+    "mongoose": "^6.3.4",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.16",
+    "onchange": "^7.1.0",
+    "prettier": "^2.6.2"
   }
 }
